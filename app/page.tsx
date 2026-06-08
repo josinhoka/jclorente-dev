@@ -1,12 +1,14 @@
-import Image from "next/image";
+import HeroSection from "@/components/sections/HeroSection";
+import FeaturedProjectsSection from "@/components/sections/FeaturedProjectsSection";
 
 export default function Home() {
   return (
-    
-      <main>
-        <h1>José Carlos Lorente</h1>
-        <p>Backend & Software Developer</p>
-      </main>
-    
+    <main className="p-8">
+
+      <HeroSection />
+
+      <FeaturedProjectsSection />
+
+    </main>
   );
 }

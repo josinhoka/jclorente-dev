@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ButtonLink from "@/components/ui/ButtonLink";
 
 import { projects } from "@/data/projects";
 
@@ -200,36 +201,13 @@ export default async function ProjectDetailPage({
             "
           >
 
-            <a
-
-              href={
-                project.github
-              }
-
+            <ButtonLink
+              href={project.github}
               target="_blank"
-
               rel="noopener noreferrer"
-
-              className="
-                inline-block
-
-                px-6
-                py-3
-
-                rounded
-
-                bg-sky-500
-
-                hover:bg-sky-400
-
-                transition
-              "
-
             >
-
               View on GitHub
-
-            </a>
+            </ButtonLink>
 
           </footer>
 

@@ -1,6 +1,5 @@
 import { profile } from "@/data/profile";
-
-import Link from "next/link";
+import ButtonLink from "@/components/ui/ButtonLink";
 
 export default function HeroSection() {
 
@@ -72,43 +71,18 @@ export default function HeroSection() {
         "
       >
 
-        <Link
+        <ButtonLink
           href="/projects"
-
-          className="
-            px-6
-            py-3
-
-            rounded
-
-            bg-sky-500
-
-            hover:bg-sky-400
-          "
+          //variant="primary"
         >
-
           View Projects
+        </ButtonLink>
 
-        </Link>
-
-        <Link
-          href="/experience"
-
-          className="
-            px-6
-            py-3
-
-            rounded
-
-            border
-
-            border-slate-700
-          "
-        >
-
-          Experience
-
-        </Link>
+        <ButtonLink
+            href="/experience"
+            variant="secondary"
+        >Experience
+        </ButtonLink>
 
       </div>
 

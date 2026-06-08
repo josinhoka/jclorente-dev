@@ -12,6 +12,7 @@
 
 }
 
+/*
 @theme inline {
 
   --color-background: var(--background);
@@ -23,6 +24,7 @@
   --font-mono: var(--font-geist-mono);
 
 }
+*/
 
 * {
   box-sizing: border-box;
@@ -41,4 +43,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 
   min-height: 100vh;
+}
+
+a {
+  transition: 
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+a:hover {
+  color: var(--accent);
 }

@@ -1,25 +1,119 @@
 import { profile } from "@/data/profile";
 
-export default function HeroSection() {
-  return (
-    <section className="py-20">
+import Link from "next/link";
 
-      <h1 className="text-5xl font-bold mb-4">
+export default function HeroSection() {
+
+  return (
+
+    <section
+      className="
+        py-28
+      "
+    >
+
+      <p
+        className="
+          text-sky-400
+          uppercase
+          tracking-widest
+          mb-6
+        "
+      >
+        Portfolio
+      </p>
+
+      <h1
+        className="
+          text-6xl
+          font-bold
+
+          leading-tight
+        "
+      >
         {profile.name}
       </h1>
 
-      <h2 className="text-2xl text-slate-400 mb-4">
+      <h2
+        className="
+          text-3xl
+
+          text-slate-300
+
+          mt-6
+        "
+      >
         {profile.headline}
       </h2>
 
-      <p className="text-slate-300 mb-8">
-        {profile.tagline}
-      </p>
+      <p
+        className="
+          mt-6
 
-      <p className="max-w-3xl text-lg text-slate-400">
+          max-w-3xl
+
+          text-lg
+
+          text-slate-400
+        "
+      >
         {profile.description}
       </p>
 
+      <div
+        className="
+          mt-10
+
+          flex
+
+          gap-4
+
+          flex-wrap
+        "
+      >
+
+        <Link
+          href="/projects"
+
+          className="
+            px-6
+            py-3
+
+            rounded
+
+            bg-sky-500
+
+            hover:bg-sky-400
+          "
+        >
+
+          View Projects
+
+        </Link>
+
+        <Link
+          href="/experience"
+
+          className="
+            px-6
+            py-3
+
+            rounded
+
+            border
+
+            border-slate-700
+          "
+        >
+
+          Experience
+
+        </Link>
+
+      </div>
+
     </section>
+
   );
+
 }

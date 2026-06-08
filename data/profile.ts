@@ -1,6 +1,6 @@
 export const profile = {
-  name: "José Carlos Lorente",
-  headline: "Backend Developer",
+  name: "José Carlos Lorente García",
+  headline: "Backend & Software Developer",
 
   tagline:
     "Java • Spring Boot • PHP • Laravel",
@@ -10,7 +10,7 @@ export const profile = {
 
   github: "https://github.com/josinhoka",
 
-  linkedin: "https://linkedin.com/in/jose-carlos-lorente",
+  linkedin: "https://linkedin.com/in/josé-carlos-lorente-93b78341",
 
   email: "josinhoka@gmail.com",
 };

@@ -1,3 +1,9 @@
+import SectionTitle from "@/components/ui/SectionTitle";
+
 export default function ProjectsPage() {
-    return <h1>Projects</h1>;
+    return (
+    <main>
+      <SectionTitle title="Projects" />
+    </main>
+  );
 }

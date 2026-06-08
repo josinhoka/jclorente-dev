@@ -1,0 +1,13 @@
+interface SectionTitleProps {
+    title: string;
+}   
+
+export default  function SectionTitle({
+    title, 
+}: SectionTitleProps ) {
+    return (
+        <h2 className="text-3x1 font-blod">
+            {title}
+        </h2>
+    );
+}

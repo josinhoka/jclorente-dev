@@ -57,7 +57,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
       </section>
 
       {project.github && (
-        <footer style={{ marginTop: "3rem", paddingTop: "1rem", borderTop: "1px solid #eaeaea" }}>
+        //<footer style={{ marginTop: "3rem", paddingTop: "1rem", borderTop: "1px solid #eaeaea" }}>
+            <footer>
           <a 
             href={project.github} 
             target="_blank" 

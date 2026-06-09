@@ -5,7 +5,7 @@ export const projects: Project[] = [
     slug: "waterman",
     title: "Waterman",
     description:
-      "Gestión integral de escuela de deportes acuáticos.",
+      "Management platform for water sports schools including scheduling, student management, invoicing and operational coordination.",
     technologies: [
       "Laravel",
       "PHP",
@@ -14,14 +14,24 @@ export const projects: Project[] = [
     ],
     featured: true,
     year: "2026",
-    github: ""
+    github: "",
+    features:[
+      "Class scheduling",
+      "Instructor coordination",
+      "Student management",
+      "Offers and discounts",
+      "Invoicing",
+      "Calendar management"
+    ],
+    architecture: "Laravel monolithic application organised by business modules",
+    status: "Paused — planned continuation"
   },
 
   {
     slug: "waterman-api",
     title: "Waterman API",
     description:
-      "API REST con Spring Boot y Kafka.",
+      "REST API built with Spring Boot and Kafka demonstrating asynchronous communication patterns.",
     technologies: [
       "Java",
       "Spring Boot",
@@ -37,7 +47,7 @@ export const projects: Project[] = [
     slug: "frogger",
     title: "Frogger",
     description:
-      "Videojuego desarrollado en Java durante la universidad.",
+      "University project recreating Frogger in Java with object-oriented design principles.",
     technologies: [
       "Java",
       "Swing"
@@ -47,10 +57,10 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "publicidad-derecho",
-    title: "Publicidad y Derecho",
+    slug: "derecho-publicidad",
+    title: "Derecho de la Publicidad",
     description:
-      "Portal universitario desarrollado en PHP.",
+      "University portal allowing professors to manage publications and website content autonomously.",
     technologies: [
       "PHP",
       "CodeIgniter",

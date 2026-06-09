@@ -6,7 +6,7 @@ import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 
 import SectionTitle
-from "@/components/ui/SectionTitle";
+  from "@/components/ui/SectionTitle";
 
 interface ProjectPageProps {
 
@@ -143,53 +143,102 @@ export default async function ProjectDetailPage({
 
       </section>
 
-      <section>
+     <section className="space-y-16">
 
-        <SectionTitle
-          title="Tech Stack"
-        />
+  {project.features && (
+    <section>
 
-        <div
+      <SectionTitle
+        title="Features"
+      />
+
+      <ul className="mt-6 space-y-3">
+
+        {project.features.map((feature) => (
+
+          <li
+            key={feature}
+            className="
+              text-slate-300
+              leading-7
+            "
+          >
+            • {feature}
+          </li>
+
+        ))}
+
+      </ul>
+
+    </section>
+  )}
+
+  {project.architecture && (
+    <section>
+
+      <SectionTitle
+        title="Architecture"
+      />
+
+      <p
+        className="
+          mt-6
+          text-slate-300
+          leading-8
+        "
+      >
+
+        {project.architecture}
+
+      </p>
+
+    </section>
+  )}
+
+  <section>
+
+    <SectionTitle
+      title="Tech Stack"
+    />
+
+    <div
+      className="
+        mt-6
+
+        flex
+        flex-wrap
+
+        gap-3
+      "
+    >
+
+      {project.technologies.map((tech) => (
+
+        <span
+          key={tech}
           className="
-            flex
-            flex-wrap
-            gap-3
+            px-4
+            py-2
 
-            mt-6
+            rounded
+
+            bg-slate-800
+
+            text-slate-200
           "
         >
 
-          {project.technologies.map(
-            (
-              tech
-            ) => (
+          {tech}
 
-              <span
+        </span>
 
-                key={tech}
+      ))}
 
-                className="
-                  px-4
-                  py-2
+    </div>
 
-                  rounded
+  </section>
 
-                  bg-slate-800
-
-                  text-slate-200
-                "
-              >
-
-                {tech}
-
-              </span>
-
-            )
-          )}
-
-        </div>
-
-      </section>
+</section>
 
       {
 

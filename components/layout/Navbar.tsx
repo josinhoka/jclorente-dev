@@ -8,6 +8,8 @@ import { profile } from "@/data/profile";
 
 import { usePathname } from "next/navigation";
 
+import Image from "next/image";
+
 export default function Navbar() {
 
   const pathname =
@@ -81,37 +83,15 @@ export default function Navbar() {
 
         >
 
-          <span
-            className="
-              tracking-tight
-            "
-          >
-
-            {
-
-              profile.name
-
-                .split(" ")
-
-                .map(
-                  (
-                    word
-                  ) =>
-
-                    word[0]
-
-                )
-
-                .slice(
-                  0,
-                  2
-                )
-
-                .join("")
-
-            }
-
-          </span>
+          <Image src="/brand/logo.png"
+          alt={profile.name.split(" ").map((word) =>word[0]).slice(0,2).join("")}
+          width={56}
+          height={56}
+          className="
+          hover:scale-105
+          transition
+          "
+          />
 
         </Link>
 

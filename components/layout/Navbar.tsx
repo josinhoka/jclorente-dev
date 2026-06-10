@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import MobileMenu from "./MobileMenu";
 export default function Navbar() {
   return (
     <header className="border-b border-slate-800">
@@ -53,6 +53,8 @@ export default function Navbar() {
           </Link>
 
         </div>
+        
+        <MobileMenu />
 
       </nav>
 

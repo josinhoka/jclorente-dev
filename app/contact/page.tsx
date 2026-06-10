@@ -1,89 +1,126 @@
 import SectionTitle
 from "@/components/ui/SectionTitle";
 
-import { profile }
+import {
+profile
+}
 from "@/data/profile";
+
+import ButtonLink
+from "@/components/ui/ButtonLink";
 
 export default function ContactPage() {
 
-  return (
+return (
 
-    <main
-      className="
-        py-16
-      "
-    >
+<main
+className="
+py-20
+"
+>
 
-      <SectionTitle
-        title="Contact"
-      />
+<SectionTitle
+title="Contact"
+/>
 
-      <div
-        className="
-          mt-10
-          space-y-6
-        "
-      >
+<p
+className="
+mt-8
 
-        <a
+max-w-2xl
 
-          href={`mailto:${profile.email}`}
+text-slate-300
 
-          className="
-            block
+text-lg
+"
+>
 
-            text-xl
+Interested in backend development,
+software engineering or collaborating
+on projects?
 
-            hover:text-sky-400
-          "
-        >
+Let's talk.
 
-          {profile.email}
+</p>
 
-        </a>
+<div
+className="
+mt-12
 
-        <a
+flex
 
-          href={profile.linkedin}
+justify-center
 
-          target="_blank"
+gap-4
 
-          className="
-            block
+text-slate-400
+"
+>
 
-            text-xl
+<a
 
-            hover:text-sky-400
-          "
-        >
+href={`mailto:${profile.email}`}
 
-          LinkedIn
+className="
+hover:text-sky-400
 
-        </a>
+transition
+"
 
-        <a
+>
 
-          href={profile.github}
+Email
 
-          target="_blank"
+</a>
 
-          className="
-            block
+<span>|</span>
 
-            text-xl
+<a
 
-            hover:text-sky-400
-          "
-        >
+href={profile.github}
 
-          GitHub
+target="_blank"
 
-        </a>
+rel="noopener noreferrer"
 
-      </div>
+className="
+hover:text-sky-400
 
-    </main>
+transition
+"
 
-  );
+>
+
+GitHub
+
+</a>
+
+<span>|</span>
+
+<a
+
+href={profile.linkedin}
+
+target="_blank"
+
+rel="noopener noreferrer"
+
+className="
+hover:text-sky-400
+
+transition
+"
+
+>
+
+LinkedIn
+
+</a>
+
+</div>
+
+</main>
+
+);
 
 }

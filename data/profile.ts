@@ -15,5 +15,5 @@ export const profile = {
 
   email: "josinhoka@gmail.com",
 
-  location: "Valencia"
+  location: "Valencia, Spain"
 };

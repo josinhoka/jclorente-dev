@@ -1,14 +1,21 @@
-import HeroSection from "@/components/sections/HeroSection";
-import FeaturedProjectsSection from "@/components/sections/FeaturedProjectsSection";
+import HeroSection
+from "@/components/sections/HeroSection";
+
+import SelectedProjects
+from "@/components/sections/SelectedProjects";
 
 export default function Home() {
+
   return (
-    <main className="p-8">
+
+    <>
 
       <HeroSection />
 
-      <FeaturedProjectsSection />
+      <SelectedProjects />
 
-    </main>
+    </>
+
   );
+
 }

@@ -57,7 +57,7 @@ export const projects: Project[] = [
       "Java",
       "Swing"
     ],
-    featured: false,
+    featured: true,
     year: "2008"
   },
 

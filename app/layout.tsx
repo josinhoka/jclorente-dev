@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import {Analytics} from "@vercel/analytics/react";
 
 import {
   Geist,
@@ -68,6 +69,8 @@ export default function RootLayout({
         </main>
 
         <Footer />
+
+        <Analytics />
 
       </body>
 

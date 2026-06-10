@@ -1,12 +1,9 @@
 import Link from "next/link";
 import ButtonLink from "@/components/ui/ButtonLink";
-
 import { projects } from "@/data/projects";
-
 import { notFound } from "next/navigation";
-
-import SectionTitle
-  from "@/components/ui/SectionTitle";
+import Image from "next/image";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 interface ProjectPageProps {
 
@@ -98,19 +95,14 @@ export default async function ProjectDetailPage({
               className="
                 px-3
                 py-1
-
                 rounded
-
                 bg-sky-500
-
                 text-sm
-
                 font-semibold
               "
             >
               Featured
             </span>
-
           )}
 
         </div>
@@ -130,115 +122,126 @@ export default async function ProjectDetailPage({
         <p
           className="
             mt-6
-
             text-slate-300
-
             text-lg
-
             leading-8
           "
         >
           {project.description}
         </p>
-
       </section>
 
-     <section className="space-y-16">
+      <section className="space-y-16">
+        {project.features && (
+          <section>
+            <SectionTitle
+              title="Features"
+            />
+            <ul className="mt-6 space-y-3">
+              {project.features.map((feature) => (
+                <li
+                  key={feature}
+                  className="
+                  text-slate-300
+                  leading-7
+                  "
+                >
+                  • {feature}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
-  {project.features && (
-    <section>
-
-      <SectionTitle
-        title="Features"
-      />
-
-      <ul className="mt-6 space-y-3">
-
-        {project.features.map((feature) => (
-
-          <li
-            key={feature}
-            className="
+        {project.architecture && (
+          <section>
+            <SectionTitle
+              title="Architecture"
+            />
+            <p
+              className="
+              mt-6
               text-slate-300
-              leading-7
+              leading-8
+              "
+            >
+              {project.architecture}
+            </p>
+          </section>
+        )}
+
+        {project.images && (
+            <section>
+              <SectionTitle
+                title="Gallery"
+              />
+
+              <div
+                className="
+                mt-8
+                grid
+                md:grid-cols-2
+                gap-6
+                "
+              >
+                {project.images.map((image) => (
+                  <div
+                   key={image}
+                   className="
+                   overflow-hidden
+                   rounded-xl
+                   border
+                   border-slate-800
+                   "
+                  >
+                    <Image
+                    src={image}
+                    alt={project.title}
+                    width={1200}
+                    height={800}
+                    className="
+                    w-full
+                    hover:scale-[1.02]
+                    transition
+                    "
+                    />
+                    </div>
+                    )
+                  )}
+                  </div>
+                  </section>
+                  )}
+                  <section>
+                    <SectionTitle
+            title="Tech Stack"
+          />
+          <div
+            className="
+            mt-6
+            flex
+            flex-wrap
+            gap-3
             "
           >
-            • {feature}
-          </li>
 
-        ))}
+            {project.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="
+                px-4
+                py-2
+                rounded
+                bg-slate-800
+                text-slate-200
+                "
+              >
+                {tech}
 
-      </ul>
-
-    </section>
-  )}
-
-  {project.architecture && (
-    <section>
-
-      <SectionTitle
-        title="Architecture"
-      />
-
-      <p
-        className="
-          mt-6
-          text-slate-300
-          leading-8
-        "
-      >
-
-        {project.architecture}
-
-      </p>
-
-    </section>
-  )}
-
-  <section>
-
-    <SectionTitle
-      title="Tech Stack"
-    />
-
-    <div
-      className="
-        mt-6
-
-        flex
-        flex-wrap
-
-        gap-3
-      "
-    >
-
-      {project.technologies.map((tech) => (
-
-        <span
-          key={tech}
-          className="
-            px-4
-            py-2
-
-            rounded
-
-            bg-slate-800
-
-            text-slate-200
-          "
-        >
-
-          {tech}
-
-        </span>
-
-      ))}
-
-    </div>
-
-  </section>
-
-</section>
+              </span>
+            ))}
+          </div>
+        </section>
+      </section>
 
       {
 

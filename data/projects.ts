@@ -21,10 +21,15 @@ export const projects: Project[] = [
       "Student management",
       "Offers and discounts",
       "Invoicing",
-      "Calendar management"
+      "Calendar management",
     ],
     architecture: "Laravel monolithic application organised by business modules",
-    status: "Paused — planned continuation"
+    status: "Paused — planned continuation",
+    images: [ 
+      //"/images/projects/waterman/idea_form.webp",
+      "/images/projects/waterman/calendar.webp",
+      "/images/projects/waterman/students_history.webp"
+    ],
   },
 
   {

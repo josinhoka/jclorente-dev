@@ -1,5 +1,6 @@
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
+import {profile} from "@/data/profile";
 export default function Navbar() {
   return (
     <header className="border-b border-slate-800">
@@ -26,7 +27,13 @@ export default function Navbar() {
             transition
           "
         >
-          JC
+          <span className="
+          tracking-tight
+          ">
+            
+            {profile.name.split(" ").map((word)=>word[0]).slice(0,2).join("")}
+
+          </span>
         </Link>
 
         <div className="
@@ -53,7 +60,7 @@ export default function Navbar() {
           </Link>
 
         </div>
-        
+
         <MobileMenu />
 
       </nav>

@@ -1,5 +1,6 @@
 export const profile = {
   name: "José Carlos Lorente García",
+
   headline: "Backend & Software Developer",
 
   tagline:
@@ -13,4 +14,6 @@ export const profile = {
   linkedin: "https://linkedin.com/in/josé-carlos-lorente-93b78341",
 
   email: "josinhoka@gmail.com",
+
+  location: "Valencia"
 };

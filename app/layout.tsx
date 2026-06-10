@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import {profile} from "@/data/profile";
 
 import {
   Geist,
@@ -37,10 +38,10 @@ export const metadata = {
 
   openGraph: {
     title:
-      "José Carlos Lorente García",
+      `${profile.name} | ${profile.headline}`,
 
     description:
-      "Backend Developer Portfolio",
+      profile.description,
 
     url:
       "https://jclorente.dev",

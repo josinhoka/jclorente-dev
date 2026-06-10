@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { profile } from "@/data/profile";
 
 export default function Footer() {
@@ -6,61 +7,72 @@ export default function Footer() {
 
     <footer
       className="
-        border-t
-        border-slate-800
-        mt-20
-      "
+      mt-24
+border-t
+
+border-slate-800
+"
     >
 
       <div
         className="
-          max-w-6xl
-          mx-auto
+max-w-6xl
 
-          px-8
-          py-8
-        "
+mx-auto
+
+px-5
+
+sm:px-8
+
+py-10
+
+flex
+
+flex-col
+
+md:flex-row
+
+justify-between
+
+gap-6
+"
       >
+
+        <div>
+
+          <p className="font-semibold">
+            {profile.name}
+          </p>
+
+          <p className="
+          mt-2 
+          text-slate-400
+          "
+          >
+            {profile.headline}
+          </p>
+
+        </div>
 
         <div
           className="
-            flex
-            justify-between
-
-            flex-wrap
+          flex
+          gap-6
+          text-slate-400
           "
-        >
-
-          <p
-            className="
-              text-slate-400
-            "
-          >
-            © 2026 {profile.name}
-          </p>
-
-          <div
-            className="
-              flex
-              gap-6
-            "
           >
 
-            <a
-              href={profile.github}
-              target="_blank"
-            >
-              GitHub
-            </a>
+          <Link href="/projects">
+            Projects
+          </Link>
 
-            <a
-              href={profile.linkedin}
-              target="_blank"
-            >
-              LinkedIn
-            </a>
+          <Link href="/experience">
+            Experience
+          </Link>
 
-          </div>
+          <Link href="/contact">
+            Contact
+          </Link>
 
         </div>
 

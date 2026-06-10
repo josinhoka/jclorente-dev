@@ -53,7 +53,18 @@ export const metadata = {
       "en_US",
 
     type:
-      "website"
+      "website",
+
+    images: [
+      {
+        url:
+        "/og/cover.png",
+
+        width: 1200,
+        height: 630
+
+      }
+    ]
 
   }
 };

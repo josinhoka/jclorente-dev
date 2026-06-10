@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {Analytics} from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react";
 
 import {
   Geist,
@@ -9,10 +9,10 @@ import {
 import "./globals.css";
 
 import Navbar
-from "@/components/layout/Navbar";
+  from "@/components/layout/Navbar";
 
 import Footer
-from "@/components/layout/Footer";
+  from "@/components/layout/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,11 +27,34 @@ const geistMono = Geist_Mono({
 export const metadata = {
 
   title:
-    "José Carlos Lorente",
+    "José Carlos Lorente García | Backend Developer",
 
   description:
-    "Backend Developer Portfolio",
+    "Backend Developer focused on Java, PHP and software development. Portfolio and selected projects.",
 
+  metadataBase:
+    new URL("https://jclorente.dev"),
+
+  openGraph: {
+    title:
+      "José Carlos Lorente García",
+
+    description:
+      "Backend Developer Portfolio",
+
+    url:
+      "https://jclorente.dev",
+
+    siteName:
+      "jclorente.dev",
+
+    locale:
+      "en_US",
+
+    type:
+      "website"
+
+  }
 };
 
 export default function RootLayout({
@@ -59,7 +82,7 @@ export default function RootLayout({
         <Navbar />
 
         <main
-        className="
+          className="
         w-full
         max-w-6xl
         mx-auto

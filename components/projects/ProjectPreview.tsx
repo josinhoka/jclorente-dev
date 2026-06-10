@@ -36,9 +36,9 @@ export default function ProjectPreview({
       <div
         className="
           flex
-
-          justify-between
-
+          flex-col
+          sm:flex-row
+          gap-3
           items-start
         "
       >

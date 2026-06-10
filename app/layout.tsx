@@ -56,12 +56,14 @@ export default function RootLayout({
         <Navbar />
 
         <main
-          className="
-            max-w-6xl
-            mx-auto
-            px-8
-            flex-1
-          "
+        className="
+        w-full
+        max-w-6xl
+        mx-auto
+        px-5
+        sm:px-8
+        flex-1
+        "
         >
 
           {children}

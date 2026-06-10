@@ -180,7 +180,8 @@ export default async function ProjectDetailPage({
                 className="
                 mt-8
                 grid
-                md:grid-cols-2
+                grid-cols-1
+                lg:grid-cols-2
                 gap-6
                 "
               >

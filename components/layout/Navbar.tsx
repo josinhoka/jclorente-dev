@@ -6,14 +6,14 @@ export default function Navbar() {
 
       <nav
         className="
-          max-w-6xl
-          mx-auto
-          px-8
-          py-5
-
-          flex
-          justify-between
-          items-center
+        max-w-6xl
+        mx-auto
+        px-5
+        sm:px-8
+        py-5
+        flex
+        justify-between
+        items-center
         "
       >
 
@@ -29,7 +29,12 @@ export default function Navbar() {
           JC
         </Link>
 
-        <div className="flex gap-8">
+        <div className="
+        hidden
+        md:flex
+        gap-8
+        "
+        >
 
           <Link href="/projects">
             Projects

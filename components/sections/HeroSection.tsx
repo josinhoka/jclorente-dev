@@ -7,7 +7,8 @@ export default function HeroSection() {
 
     <section
       className="
-        py-28
+        py-20
+        md:py-28
       "
     >
 
@@ -24,10 +25,10 @@ export default function HeroSection() {
 
       <h1
         className="
-          text-6xl
-          font-bold
-
-          leading-tight
+        text-4xl
+        md:text-6xl
+        font-bold
+        leading-tight
         "
       >
         {profile.name}
@@ -35,11 +36,10 @@ export default function HeroSection() {
 
       <h2
         className="
-          text-3xl
-
-          text-slate-300
-
-          mt-6
+        text-xl
+        md:text-3xl
+        text-slate-300
+        mt-6
         "
       >
         {profile.headline}
@@ -48,11 +48,8 @@ export default function HeroSection() {
       <p
         className="
           mt-6
-
           max-w-3xl
-
           text-lg
-
           text-slate-400
         "
       >
@@ -62,12 +59,10 @@ export default function HeroSection() {
       <div
         className="
           mt-10
-
           flex
-
+          flex-col
+          sm:flex-row
           gap-4
-
-          flex-wrap
         "
       >
 

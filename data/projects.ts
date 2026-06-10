@@ -24,7 +24,7 @@ export const projects: Project[] = [
       "Calendar management",
     ],
     architecture: "Laravel monolithic application organised by business modules",
-    status: "Paused — planned continuation",
+    status: "Prototype completed — further development planned",
     images: [ 
       //"/images/projects/waterman/idea_form.webp",
       "/images/projects/waterman/calendar.webp",

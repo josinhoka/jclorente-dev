@@ -185,29 +185,68 @@ export default async function ProjectDetailPage({
                 "
               >
                 {project.images.map((image) => (
-                  <div
-                   key={image}
-                   className="
-                   overflow-hidden
-                   rounded-xl
-                   border
-                   border-slate-800
-                   "
-                  >
-                    <Image
-                    src={image}
-                    alt={project.title}
-                    width={1200}
-                    height={800}
-                    className="
-                    w-full
-                    hover:scale-[1.02]
-                    transition
-                    "
-                    />
-                    </div>
-                    )
-                  )}
+
+  <figure
+    key={image}
+
+    className="
+      rounded-2xl
+
+      overflow-hidden
+
+      border
+
+      border-slate-800
+
+      bg-slate-900
+    "
+  >
+
+    <Image
+      src={image}
+
+      alt={`${project.title} screenshot`}
+
+      width={1400}
+
+      height={900}
+
+      loading="lazy"
+
+      className="
+        w-full
+
+        transition
+
+        hover:scale-[1.01]
+      "
+    />
+
+    <figcaption
+      className="
+        px-5
+        py-4
+
+        text-sm
+
+        text-slate-400
+      "
+    >
+
+      {
+        image
+          .split("/")
+          .pop()
+          ?.replace(".webp","")
+          .replace("-"," ")
+      }
+
+    </figcaption>
+
+  </figure>
+
+))}
+
                   </div>
                   </section>
                   )}

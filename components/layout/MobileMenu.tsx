@@ -31,34 +31,30 @@ label:"Contact"
 export default function MobileMenu() {
 
 const [
-
 open,
-
 setOpen
-
 ] = useState(false);
 
 return (
 
-<div
-className="
-md:hidden
-"
->
+<>
 
 <button
 
-onClick={
-()=>setOpen(
+onClick={()=>
+setOpen(
 !open
 )
 }
 
 className="
+md:hidden
+
 text-3xl
 
 text-slate-200
 "
+
 >
 
 ☰
@@ -69,17 +65,39 @@ text-slate-200
 
 open && (
 
+<>
+
 <div
+
+onClick={()=>
+setOpen(
+false
+)
+}
+
 className="
-absolute
+fixed
+
+inset-0
+
+bg-black/40
+
+z-40
+"
+/>
+
+<div
+
+className="
+fixed
 
 top-20
 
+left-5
+
 right-5
 
-w-60
-
-rounded-xl
+rounded-2xl
 
 bg-slate-900
 
@@ -89,10 +107,11 @@ border-slate-800
 
 p-6
 
-space-y-4
+space-y-6
 
-shadow-xl
+z-50
 "
+
 >
 
 {
@@ -112,8 +131,8 @@ href={
 link.href
 }
 
-onClick={
-()=>setOpen(
+onClick={()=>
+setOpen(
 false
 )
 }
@@ -121,10 +140,13 @@ false
 className="
 block
 
-text-slate-300
+text-xl
+
+text-slate-200
 
 hover:text-sky-400
 "
+
 >
 
 {
@@ -134,17 +156,20 @@ link.label
 </Link>
 
 )
-)
-
-}
-
-</div>
 
 )
 
 }
 
 </div>
+
+</>
+
+)
+
+}
+
+</>
 
 );
 

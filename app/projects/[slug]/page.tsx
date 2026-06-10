@@ -41,8 +41,12 @@ export default async function ProjectDetailPage({
 
     <main
       className="
-        py-16
+        w-full
         max-w-4xl
+        mx-auto
+        py-16
+        px-5
+        sm:px-8
       "
     >
 
@@ -58,17 +62,17 @@ export default async function ProjectDetailPage({
 
       <header
         className="
-          mt-8
-          mb-12
+          mt-10
+          mb-14
         "
       >
 
         <div
           className="
             flex
-            items-center
-            gap-4
             flex-wrap
+            items-end
+            gap-4
           "
         >
 
@@ -216,10 +220,11 @@ export default async function ProjectDetailPage({
 
       className="
         w-full
-
         transition
-
-        hover:scale-[1.01]
+        hover:scale-[1.03]
+        cursor-pointer
+        aspect-video
+        object-cover
       "
     />
 

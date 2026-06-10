@@ -1,63 +1,180 @@
+"use client";
+
 import Link from "next/link";
+
 import MobileMenu from "./MobileMenu";
-import {profile} from "@/data/profile";
+
+import { profile } from "@/data/profile";
+
+import { usePathname } from "next/navigation";
+
 export default function Navbar() {
+
+  const pathname =
+    usePathname();
+
+  const links = [
+
+    {
+      href: "/projects",
+      label: "Projects"
+    },
+
+    {
+      href: "/experience",
+      label: "Experience"
+    },
+
+    {
+      href: "/about",
+      label: "About"
+    },
+
+    {
+      href: "/contact",
+      label: "Contact"
+    }
+
+  ];
+
   return (
-    <header className="border-b border-slate-800">
+
+    <header
+      className="
+        border-b
+        border-slate-800
+      "
+    >
 
       <nav
         className="
-        max-w-6xl
-        mx-auto
-        px-5
-        sm:px-8
-        py-5
-        flex
-        justify-between
-        items-center
+          max-w-6xl
+
+          mx-auto
+
+          px-5
+          sm:px-8
+
+          py-5
+
+          flex
+
+          justify-between
+
+          items-center
         "
       >
 
         <Link
+
           href="/"
+
           className="
             text-2xl
+
             font-bold
+
             hover:text-sky-400
+
             transition
           "
+
         >
-          <span className="
-          tracking-tight
-          ">
-            
-            {profile.name.split(" ").map((word)=>word[0]).slice(0,2).join("")}
+
+          <span
+            className="
+              tracking-tight
+            "
+          >
+
+            {
+
+              profile.name
+
+                .split(" ")
+
+                .map(
+                  (
+                    word
+                  ) =>
+
+                    word[0]
+
+                )
+
+                .slice(
+                  0,
+                  2
+                )
+
+                .join("")
+
+            }
 
           </span>
+
         </Link>
 
-        <div className="
-        hidden
-        md:flex
-        gap-8
-        "
+        <div
+          className="
+            hidden
+
+            md:flex
+
+            gap-8
+          "
         >
 
-          <Link href="/projects">
-            Projects
-          </Link>
+          {
 
-          <Link href="/experience">
-            Experience
-          </Link>
+            links.map(
+              (
+                link
+              ) => (
 
-          <Link href="/about">
-            About
-          </Link>
+                <Link
 
-          <Link href="/contact">
-            Contact
-          </Link>
+                  key={
+                    link.href
+                  }
+
+                  href={
+                    link.href
+                  }
+
+                  className={`
+
+                    transition
+
+                    ${
+
+                      pathname ===
+                      link.href
+
+                      ?
+
+                      "text-sky-400"
+
+                      :
+
+                      "text-slate-300 hover:text-sky-400"
+
+                    }
+
+                  `}
+
+                >
+
+                  {
+                    link.label
+                  }
+
+                </Link>
+
+              )
+            )
+
+          }
 
         </div>
 
@@ -66,5 +183,7 @@ export default function Navbar() {
       </nav>
 
     </header>
+
   );
+
 }

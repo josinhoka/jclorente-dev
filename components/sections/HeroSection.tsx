@@ -25,10 +25,12 @@ export default function HeroSection() {
 
       <h1
         className="
-        text-4xl
-        md:text-6xl
+        text-5xl
+        md:text-7xl
         font-bold
-        leading-tight
+        leading-[1.05]
+        tracking.tight
+        mt-3
         "
       >
         {profile.name}
@@ -36,10 +38,11 @@ export default function HeroSection() {
 
       <h2
         className="
-        text-xl
+        mt-5
+        text-2xl
         md:text-3xl
         text-slate-300
-        mt-6
+        font-medium
         "
       >
         {profile.headline}
@@ -47,9 +50,10 @@ export default function HeroSection() {
 
       <p
         className="
-          mt-6
-          max-w-3xl
+          mt-8
+          max-w-2xl
           text-lg
+          leading-8
           text-slate-400
         "
       >
@@ -58,7 +62,7 @@ export default function HeroSection() {
 
       <div
         className="
-          mt-10
+          mt-12
           flex
           flex-col
           sm:flex-row

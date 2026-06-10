@@ -7,7 +7,7 @@ export const profile = {
     "Java • Spring Boot • PHP • Laravel",
 
   description:
-    "Ingeniero Técnico en Informática de Gestión especializado en desarrollo backend, APIs REST y herramientas de gestión. Background en sistemas, automatización, Linux y resolución de incidencias complejas.",
+    "From systems and operations to building software, APIs and digital products.",
 
   github: "https://github.com/josinhoka",
 

@@ -7,6 +7,7 @@ export interface Project {
   featured: boolean;
   year: string;
   github?: string;
+  private?:boolean;
   status?: string;
   features?: string[];
   architecture?: string;

@@ -59,7 +59,14 @@ export const projects: Project[] = [
       "Automation"
     ],
     featured: true,
-    year: "2016"
+    year: "2016",
+    images: [ 
+      //"/images/projects/waterman/idea_form.webp",
+      "/images/projects/position-management-tool/stook_management_gui.webp"
+    ],
+    github: "Private project",
+    private: true
+
   },
 
   {

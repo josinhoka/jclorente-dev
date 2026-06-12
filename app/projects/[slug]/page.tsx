@@ -171,23 +171,22 @@ export default async function ProjectDetailPage({
                     className="
                     rounded-2xl
                     overflow-hidden
-                    border
-                    border-slate-800
                     bg-slate-900
                     ">
                       
                       <Image src={image} 
                         alt={`${project.title} screenshot`}
-                        width={1400}
+                        width={1600}
                         height={900}
                         loading="lazy"
                         className="
                         w-full
                         transition
+                        duration-300
                         hover:scale-[1.03]
                         cursor-pointer
                         aspect-video
-                        object-cover
+                        object-contain
                         "/>
                       
                         <figcaption className="
@@ -238,19 +237,73 @@ export default async function ProjectDetailPage({
       {project.github && (
 
         <footer
-          className="
-            mt-16
-            ">
+className="
+mt-16
+"
+>
 
-          <ButtonLink
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-              View on GitHub
-          </ButtonLink>
+{
 
-        </footer>
+project.private
+
+?
+
+(
+
+<span
+className="
+text-slate-500
+"
+>
+
+Private repository
+<br />
+
+<span
+className="
+text-slate-600
+text-sm
+"
+>
+
+Internal enterprise tool
+
+</span>
+
+
+</span>
+
+)
+
+:
+
+(
+
+project.github && (
+
+<ButtonLink
+
+href={
+project.github
+}
+
+target="_blank"
+
+rel="noopener noreferrer"
+
+>
+
+View on GitHub
+
+</ButtonLink>
+
+)
+
+)
+
+}
+
+</footer>
 
       )}
 

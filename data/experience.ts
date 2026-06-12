@@ -23,6 +23,31 @@ export const experiences: Experience[] = [
   },
 
   {
+    company: "CINFO",
+
+    role:
+      "Systems Administration & Application Operations",
+
+    start: "2021",
+
+    end: "2021",
+
+    location: "A Coruña",
+
+    description:
+      "Provided operational support for web applications and online event infrastructure, including camera setup and configuration for live streaming environments.",
+
+      technologies: [
+      "AWS",
+      "Docker",
+      "Linux",
+      "PHP",
+      "LDAP",
+      "Confluence"
+    ]
+  },
+
+  {
     company: "T-Systems / Inditex",
 
     role:

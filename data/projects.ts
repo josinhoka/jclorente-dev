@@ -49,6 +49,20 @@ export const projects: Project[] = [
   },
 
   {
+    slug: "position-management-tool",
+    title: "Stock Position Management Tool",
+    description:
+      "Developed and deployed a Java application to manage stock position creation incidents, automating operational workflows and reducing resolution times from days to minutes while improving process reliability.",
+    technologies: [
+      "Java",
+      "Swing", 
+      "Automation"
+    ],
+    featured: true,
+    year: "2016"
+  },
+
+  {
     slug: "frogger",
     title: "Frogger",
     description:
@@ -57,7 +71,7 @@ export const projects: Project[] = [
       "Java",
       "Swing"
     ],
-    featured: true,
+    featured: false,
     year: "2008"
   },
 

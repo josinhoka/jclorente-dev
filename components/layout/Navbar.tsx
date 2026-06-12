@@ -57,7 +57,7 @@ export default function Navbar() {
           px-5
           sm:px-8
 
-          py-5
+          py-4
 
           flex
 
@@ -84,14 +84,14 @@ export default function Navbar() {
         >
 
           <Image src="/brand/logo.png"
-          alt={profile.name.split(" ").map((word) =>word[0]).slice(0,2).join("")}
-          width={56}
-          height={56}
-          className="
-          hover:scale-105
-          transition
-          "
-          />
+            alt={profile.name.split(" ").map((word) =>word[0]).slice(0,2).join("")}
+            width={60}
+            height={60}
+            className="
+            brightness-105
+            hover:scale-105
+            transition
+            "/>
 
         </Link>
 

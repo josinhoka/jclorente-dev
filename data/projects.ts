@@ -70,19 +70,6 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "frogger",
-    title: "Frogger",
-    description:
-      "University project recreating Frogger in Java with object-oriented design principles.",
-    technologies: [
-      "Java",
-      "Swing"
-    ],
-    featured: false,
-    year: "2008"
-  },
-
-  {
     slug: "derecho-publicidad",
     title: "Derecho de la Publicidad",
     description:
@@ -94,5 +81,18 @@ export const projects: Project[] = [
     ],
     featured: false,
     year: "2011"
+  },
+
+    {
+    slug: "frogger",
+    title: "Frogger",
+    description:
+      "University project recreating Frogger in Java with object-oriented design principles.",
+    technologies: [
+      "Java",
+      "Swing"
+    ],
+    featured: false,
+    year: "2008"
   }
 ];

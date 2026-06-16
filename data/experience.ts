@@ -28,7 +28,7 @@ export const experiences: Experience[] = [
     role:
       "Systems Administration & Application Operations",
 
-    start: "2021",
+    start: "2020",
 
     end: "2021",
 

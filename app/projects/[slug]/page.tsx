@@ -236,74 +236,39 @@ export default async function ProjectDetailPage({
 
       {project.github && (
 
-        <footer
-className="
-mt-16
-"
->
+        <footer className="
+        mt-16
+        ">
+          {project.private? (
+            <span className="
+            text-slate-500
+            ">
+              Private repository
+              <br />
+              <span className="
+              text-slate-600
+              text-sm
+              ">
+                Internal enterprise tool
+              </span>
+            
+            </span>
+          )
+        
+          :( project.github && (
+        
+          <ButtonLink
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+            View on GitHub
+            
+          </ButtonLink>
 
-{
-
-project.private
-
-?
-
-(
-
-<span
-className="
-text-slate-500
-"
->
-
-Private repository
-<br />
-
-<span
-className="
-text-slate-600
-text-sm
-"
->
-
-Internal enterprise tool
-
-</span>
-
-
-</span>
-
-)
-
-:
-
-(
-
-project.github && (
-
-<ButtonLink
-
-href={
-project.github
-}
-
-target="_blank"
-
-rel="noopener noreferrer"
-
->
-
-View on GitHub
-
-</ButtonLink>
-
-)
-
-)
-
-}
-
-</footer>
+          ))}
+        
+        </footer>
 
       )}
 

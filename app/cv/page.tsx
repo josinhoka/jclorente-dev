@@ -1,10 +1,10 @@
-import {
-redirect
-}
-from "next/navigation";
+import RedirectPage from "@/components/RedirectPage";
 
-export default function Page(){
+export default function Page() {
 
-redirect("/");
+    return (
+        <RedirectPage source="cv" />
+    );
+
 
 }

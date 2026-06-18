@@ -1,10 +1,9 @@
-import {
-redirect
-}
-from "next/navigation";
+import RedirectPage from "@/components/RedirectPage";
 
-export default function Page(){
-
-redirect("/");
+export default function Page() {
+    
+    return (
+        <RedirectPage source="linkedin" />
+    );
 
 }

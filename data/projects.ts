@@ -83,7 +83,7 @@ export const projects: Project[] = [
     year: "2011"
   },
 
-    {
+  {
     slug: "frogger",
     title: "Frogger",
     description:
@@ -94,5 +94,56 @@ export const projects: Project[] = [
     ],
     featured: false,
     year: "2008"
+  },
+
+  {
+    slug: "bomberman",
+    title: "Java 2D Game Engine",
+    description:
+      "Object-oriented game engine implementing the core mechanics of Bomberman.",
+    technologies: [
+      "Java",
+      "Swing",
+      "OOP",
+      "Game Loop",
+      "Multithreading"
+    ],
+    architecture:"The engine is organised into four layers: Presentation, Game Controller, Domain Model and Utilities. Rendering, game logic and entity management are separated to improve maintainability and extensibility while following object-oriented design principles.",
+    features: [
+
+  "60 FPS game loop",
+
+  "State machine",
+
+  "Tile-based level system",
+
+  "ASCII level parser",
+
+  "Collision detection",
+
+  "Entity hierarchy",
+
+  "Power-up system",
+
+  "Enemy AI",
+
+  "Audio manager",
+
+  "Object-oriented architecture"
+
+],
+    featured: false,
+    year: "2026",
+    github: "https://github.com/josinhoka/bomberman-java-clone",
+    images: [
+
+"/images/projects/bomberman/main-menu.webp",
+
+"/images/projects/bomberman/gameplay.webp",
+
+"/images/projects/bomberman/explosion.webp"
+
+]
+
   }
 ];

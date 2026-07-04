@@ -1,34 +1,11 @@
 interface TechBadgeProps {
-
   label: string;
-
 }
 
-export default function TechBadge({
-  label,
-}: TechBadgeProps) {
-
+export default function TechBadge({ label }: TechBadgeProps) {
   return (
-
-    <span
-      className="
-        px-3
-        py-1
-
-        rounded
-
-        bg-slate-800
-
-        text-slate-200
-
-        text-sm
-      "
-    >
-
+    <span className="text-xs font-medium px-2.5 py-1 rounded-md bg-slate-800/60 text-slate-300 border border-slate-700/50 shadow-sm">
       {label}
-
     </span>
-
   );
-
 }

@@ -1,3 +1,9 @@
+export type ProjectCategory =
+  | "backend"
+  | "automation"
+  | "engineering";
+
+
 export interface Project {
 
   slug: string;
@@ -12,4 +18,5 @@ export interface Project {
   features?: string[];
   architecture?: string;
   images?: string[];
+  category?: ProjectCategory;
 }

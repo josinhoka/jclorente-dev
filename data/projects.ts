@@ -30,6 +30,7 @@ export const projects: Project[] = [
       "/images/projects/waterman/calendar.webp",
       "/images/projects/waterman/students_history.webp"
     ],
+    category: "backend"
   },
 
   {
@@ -42,10 +43,11 @@ export const projects: Project[] = [
       "Spring Boot",
       "Kafka"
     ],
-    featured: true,
+    featured: false,
     year: "2026",
     github:
-      "https://github.com/josinhoka/waterman-api"
+      "https://github.com/josinhoka/waterman-api",
+    category: "backend"
   },
 
   {
@@ -65,8 +67,8 @@ export const projects: Project[] = [
       "/images/projects/position-management-tool/stook_management_gui.webp"
     ],
     github: "Private project",
-    private: true
-
+    private: true,
+    category: "automation"
   },
 
   {
@@ -80,20 +82,8 @@ export const projects: Project[] = [
       "MySQL"
     ],
     featured: false,
-    year: "2011"
-  },
-
-  {
-    slug: "frogger",
-    title: "Frogger",
-    description:
-      "University project recreating Frogger in Java with object-oriented design principles.",
-    technologies: [
-      "Java",
-      "Swing"
-    ],
-    featured: false,
-    year: "2008"
+    year: "2011",
+    category: "automation"
   },
 
   {
@@ -110,40 +100,38 @@ export const projects: Project[] = [
     ],
     architecture:"The engine is organised into four layers: Presentation, Game Controller, Domain Model and Utilities. Rendering, game logic and entity management are separated to improve maintainability and extensibility while following object-oriented design principles.",
     features: [
-
-  "60 FPS game loop",
-
-  "State machine",
-
-  "Tile-based level system",
-
-  "ASCII level parser",
-
-  "Collision detection",
-
-  "Entity hierarchy",
-
-  "Power-up system",
-
-  "Enemy AI",
-
-  "Audio manager",
-
-  "Object-oriented architecture"
-
-],
-    featured: false,
+      "60 FPS game loop",
+      "State machine",
+      "Tile-based level system",
+      "ASCII level parser",
+      "Collision detection",
+      "Entity hierarchy",
+      "Power-up system",
+      "Enemy AI",
+      "Audio manager",
+      "Object-oriented architecture"
+    ],
+    featured: true,
     year: "2026",
     github: "https://github.com/josinhoka/bomberman-java-clone",
     images: [
-
-"/images/projects/bomberman/main-menu.webp",
-
-"/images/projects/bomberman/gameplay.webp",
-
-"/images/projects/bomberman/explosion.webp"
-
-]
-
-  }
+      "/images/projects/bomberman/main-menu.webp",
+      "/images/projects/bomberman/gameplay.webp",
+      "/images/projects/bomberman/explosion.webp"
+    ],
+    category: "engineering"
+  },
+  {
+    slug: "frogger",
+    title: "Frogger",
+    description:
+      "University project recreating Frogger in Java with object-oriented design principles.",
+    technologies: [
+      "Java",
+      "Swing"
+    ],
+    featured: false,
+    year: "2008",
+    category: "engineering"
+  },
 ];

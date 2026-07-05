@@ -1,22 +1,19 @@
 import SectionTitle
 from "@/components/ui/SectionTitle";
 
-import { about }
-from "@/data/about";
+import { about } from "@/data/about";
+import PageTitle from "@/components/ui/PageTitle";
 
 export default function AboutPage() {
 
   return (
 
-    <main
-      className="
-        py-16
-        max-w-4xl
-      ">
+    <main className="max-w-5xl mx-auto px-6 py-12 md:px-8">
 
-      <SectionTitle
+      <PageTitle
         title={about.title}
       />
+      
 
       <div
         className="

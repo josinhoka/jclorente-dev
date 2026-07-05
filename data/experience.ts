@@ -7,7 +7,7 @@ export const softwareExperience = [
     start: "2024",
     end: "Present",
     location: "Pto. Sagunto",
-    description: "Designed and implemented a distributed microservices ecosystem using Java, Spring Boot, and Apache Kafka, applying Clean Architecture and SOLID principles for high scalability. Developed a retro-style 2D game engine from scratch in pure Java, implementing the main game loop, synchronous state management, rendering, and optimized collision detection algorithms.",
+    description: "Designed and implemented a distributed microservices ecosystem using **Java, Spring Boot, and Apache Kafka**, applying **Clean Architecture** and SOLID principles for high scalability. Developed a retro-style 2D game engine from scratch in **pure Java**, implementing the main game loop, synchronous state management, rendering, and optimized collision detection algorithms.",
     technologies: ["Java", "Spring Boot", "Apache Kafka", "REST APIs", "SQL", "Git", "Clean Architecture"]
   },
   {
@@ -25,7 +25,7 @@ export const softwareExperience = [
     start: "2015",
     end: "2020",
     location: "La Coruña",
-    description: "Supported and tuned critical Warehouse Management Systems (WMS) for global logistics platforms. Designed and developed an internal Java tool for automated stock position creation, reducing response times from days to minutes and eliminating manual errors. Automated operational tasks via scripting and monitored Linux server infrastructures.",
+    description: "Supported and tuned critical Warehouse Management Systems (WMS) for global logistics platforms. Designed and developed an internal Java tool for automated stock position creation, **reducing response times from days to minutes** and eliminating manual errors. Automated operational tasks via scripting and monitored Linux server infrastructures.",
     technologies: ["Java", "Spring Boot", "Linux", "DB2", "SQL", "Python", "Shell Scripting", "Jira"]
   },
   {
@@ -34,7 +34,7 @@ export const softwareExperience = [
     start: "2013",
     end: "2015",
     location: "La Coruña",
-    description: "Provided advanced support for global financial infrastructure applications. Designed and implemented database monitoring scripts and complex SQL queries for real-time monitoring of massive data loads, enabling early detection of bottlenecks and accelerating key report generation.",
+    description: "Provided advanced support for global financial infrastructure applications. Designed and implemented database monitoring scripts and **complex SQL** queries for real-time monitoring of massive data loads, enabling early detection of bottlenecks and accelerating key report generation.",
     technologies: ["SQL", "Oracle", "PowerShell", "Windows Server", "Excel"]
   }
 ];
@@ -46,7 +46,7 @@ export const operationsExperience = [
     start: "2022",
     end: "2024",
     location: "Various Locations",
-    description: "Led and managed highly diverse group dynamics in controlled risk environments, optimizing safety ratios and performance. Served as Race Committee Assistant and Finish Line Manager in elite international competitions, coordinating timing and operational logistics under high pressure.",
+    description: "Leadership and management of highly diverse group dynamics in controlled-risk environments, optimizing safety ratios, performance, and stress management among students. Race Committee Assistant and Finish Line Manager in elite international competitions, notably the **'24 EUROPEAN Formula KITE Championship**. Responsible for timing coordination and operational logistics under intense weather and organizational pressure.",
     technologies: ["Team Leadership", "Logistics", "Risk Management", "Event Coordination"]
   }
 ];

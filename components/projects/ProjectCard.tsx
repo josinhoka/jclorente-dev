@@ -5,16 +5,39 @@ interface Project {
   year?: string | number;
   description?: string;
   tags?: string[];
+  featured?: boolean; // Añadido para que TypeScript reconozca la propiedad
 }
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="h-full p-6 rounded-xl border border-slate-800/60 bg-slate-900/40 backdrop-blur-sm transition-all duration-300 group-hover:border-sky-400/50 group-hover:bg-slate-900/80 flex flex-col justify-between gap-4">
+    // Añadimos 'relative' y 'overflow-hidden' al contenedor principal
+    <div className="relative h-full p-6 rounded-xl border border-slate-800/60 bg-slate-900/40 backdrop-blur-sm transition-all duration-300 group-hover:border-sky-400/50 group-hover:bg-slate-900/80 flex flex-col justify-between gap-4 overflow-hidden">
       
-      {/* Contenedor superior: Título, Año y Descripción */}
-      <div>
+      {/* === ESTILOS CONDICIONALES PARA DESTACADOS === */}
+      {/* Al estar aquí dentro, se renderizan POR ENCIMA del desenfoque del cristal */}
+      {project.featured && (
+        <>
+          {/* Imagen nítida. Usa la opacidad para jugar con la intensidad (0.3 a 1.0) 
+          {/*<div 
+            className="absolute inset-0 z-0 pointer-events-none bg-no-repeat opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+            style={{ 
+              backgroundImage: "url('/images/fondo_texto.png')",
+              backgroundSize: '15% auto',
+              backgroundPosition: 'center top'
+            }}
+          />*/}
+          
+          {/* Gradiente sutil para fundir la izquierda de la imagen con el fondo oscuro de la tarjeta */}
+          <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-r from-slate-900 via-slate-900/60 to-transparent" />
+          
+          {/* Subrayado Azul Clarito inferior */}
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-sky-400/80 z-20 opacity-80 group-hover:opacity-100 transition-opacity" />
+        </>
+      )}
+
+      {/* Contenedor superior: Título, Año y Descripción (Z-10 para estar sobre la imagen) */}
+      <div className="relative z-10">
         <div className="flex justify-between items-start gap-4 mb-3">
-          {/* Aquí se cambió el color del hover del título */}
           <h3 className="font-semibold text-lg text-slate-100 group-hover:text-sky-400 transition-colors duration-200">
             {project.title}
           </h3>
@@ -31,9 +54,9 @@ export default function ProjectCard({ project }: { project: Project }) {
         </p>
       </div>
 
-      {/* Contenedor inferior: Etiquetas de tecnologías */}
+      {/* Contenedor inferior: Etiquetas de tecnologías (Z-10 para estar sobre la imagen) */}
       {project.tags && project.tags.length > 0 && (
-        <div className="flex flex-wrap gap-2 mt-2">
+        <div className="relative z-10 flex flex-wrap gap-2 mt-2">
           {project.tags.map((tag) => (
             <span 
               key={tag} 

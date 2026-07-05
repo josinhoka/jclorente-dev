@@ -1,18 +1,17 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import ExperienceCard from "@/components/experience/ExperienceCard";
 import { softwareExperience, operationsExperience } from "@/data/experience";
+import PageTitle from "@/components/ui/PageTitle";
 
 export default function ExperiencePage() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-12 md:px-8 min-h-screen">
+    <main className="max-w-5xl mx-auto px-6 py-12 md:px-8">
       
       {/* Cabecera principal de la página de Experiencia */}
       <div className="mb-16 md:mb-20 pt-4 md:pt-8">
         
         {/* Título grande y contundente */}
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-100 mb-6">
-          Experience
-        </h1>
+         <PageTitle title="Experience"/>
         
         {/* Badge estilo píldora para destacar los años */}
         <div className="inline-flex items-center rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-sm font-medium text-sky-400">

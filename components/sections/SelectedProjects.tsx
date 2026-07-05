@@ -3,12 +3,20 @@ import ProjectCard from "@/components/projects/ProjectCard";
 import { projects } from "@/data/projects";
 
 export default function SelectedProjects() {
-  // Aquí filtramos los proyectos que quieres destacar en la Home.
-  // Ajusta esto según cómo decidas cuáles mostrar (ej. por id, por categoría o simplemente los 4 primeros).
-  const featuredProjects = projects.slice(0, 4);
+  // Ahora filtramos estrictamente los proyectos que tengan la propiedad featured a true.
+  // Añadimos opcionalmente un .slice(0, 4) al final por si en el futuro marcas 
+  // demasiados como destacados y no quieres que la Home crezca infinitamente.
+  const featuredProjects = projects
+    .filter((project) => project.featured === true)
+    .slice(0, 4);
+
+  // Si no hay proyectos destacados, no renderizamos la sección para que no quede un hueco en blanco
+  if (featuredProjects.length === 0) {
+    return null;
+  }
 
   return (
-    <section className="mt-20">
+    <section className="mt-20 animate-fade-in">
       
       {/* Cabecera de la sección con la línea en gradiente */}
       <div className="flex items-center gap-4 mb-8">
@@ -18,13 +26,12 @@ export default function SelectedProjects() {
         <div className="h-px w-full bg-gradient-to-r from-slate-700/80 to-transparent" />
       </div>
 
-      {/* Grid responsivo: 1 columna en móvil, 2 en pantallas medianas/grandes */}
+      {/* Grid responsivo */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {featuredProjects.map((project) => (
           <Link
             key={project.slug}
             href={`/projects/${project.slug}`}
-            // La clase "group" aquí es VITAL para que ProjectCard cambie de color (a tu sky-400) al pasar el ratón
             className="group block no-underline text-inherit transition-all duration-300 hover:-translate-y-1"
           >
             <ProjectCard project={project} />
@@ -32,7 +39,7 @@ export default function SelectedProjects() {
         ))}
       </div>
       
-      {/* Enlace opcional para llevar al usuario a ver el resto del portfolio */}
+      {/* Enlace para ver todos los proyectos */}
       <div className="mt-10 flex justify-end">
         <Link 
           href="/projects" 

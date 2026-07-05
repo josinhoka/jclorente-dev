@@ -83,7 +83,7 @@ export const projects: Project[] = [
     ],
     featured: false,
     year: "2011",
-    category: "automation"
+    category: "backend"
   },
 
   {

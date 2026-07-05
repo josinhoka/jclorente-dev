@@ -1,5 +1,6 @@
 import { Experience } from "@/types/experience";
 import TechBadge from "./TechBadge";
+import ReactMarkdown from 'react-markdown';
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -31,9 +32,10 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
       </div>
 
       {/* Descripción */}
-      <p className="mt-4 text-slate-400 leading-relaxed text-sm md:text-base">
-        {experience.description}
-      </p>
+      <div className="mt-4 text-slate-400 leading-relaxed text-sm md:text-base">
+       <ReactMarkdown>{experience.description}</ReactMarkdown>
+      </div>
+      
 
       {/* Etiquetas */}
       {experience.technologies && experience.technologies.length > 0 && (

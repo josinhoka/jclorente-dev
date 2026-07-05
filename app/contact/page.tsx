@@ -1,16 +1,15 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import {profile} from "@/data/profile";
 import ButtonLink from "@/components/ui/ButtonLink";
+import PageTitle from "@/components/ui/PageTitle";
 
 export default function ContactPage() {
 
     return (
 
-        <main
-            className="
-            py-20
-            ">
-            <SectionTitle title="Contact"/>
+        <main className="max-w-5xl mx-auto px-6 py-12 md:px-8">
+
+            <PageTitle title="Contact"/>
 
             <p className="
             mt-8
